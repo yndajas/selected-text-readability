@@ -2,7 +2,7 @@
 Chrome extension for measuring the readability of selected text.
 
 ## Installation
-1. Go to <a href="chrome://extensions" target="_blank" title="Chrome Extensions">chrome://extensions</a>
+1. Go to chrome://extensions (or in the Chrome menu, "More tools" then "Extensions")
 2. Enable developer mode via the toggle (top right as at November 2020)
 2. Click on "Load unpacked" (top left as at November 2020)
 3. Select folder with extension files
