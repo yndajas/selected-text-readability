@@ -50,8 +50,8 @@ chrome.tabs.executeScript( {
     // get selected text and convert to a string
     code: "window.getSelection().toString();"
 }, function(selection) { // pass in the return value of the code (the selected text) to a function as selection
-    // trim leading and trailing spaces, replace new lines with spaces, then reduce any remaining consecutive spaces to single spaces
-    var text = selection[0].trim().replace(/(\r\n|\n|\r)/gm, ' ').replace(/\s\s+/g, ' ');
+    // trim leading and trailing spaces, replace new lines with spaces, remove any characters that aren't in the algorithm, then reduce any remaining consecutive spaces to single spaces
+    var text = selection[0].trim().replace(/(\r\n|\n|\r)/gm, ' ').replace(/[^a-zA-Z.!? ]/g, '').replace(/\s\s+/g, ' ');
 
     // if there is selected text, run readability alogrithm and inject result
     if (text.length > 0) { // if not, provide usage instructions;
@@ -98,7 +98,9 @@ chrome.tabs.executeScript( {
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
               <div class="card-body">
-                <p>The calculation is based on the <a href="https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index" target="_blank">Coleman-Liau index</a> and relies on counting letters, words and sentences.</p>
+                <p>The calculation is based on the <a href="https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index" target="_blank">Coleman-Liau index</a> and relies on counting letters, words and sentences, as outlined below.</p>
+
+                <p>Note: for greater accuracy, before running the calculation the text is stripped of any characters other than a-z/A-Z, '.', '?', '!' and spaces, and consecutive spaces and line breaks are reduced to a single space.</p>
 
                 <p><em>Letters</em> are the characters a-z/A-Z.</p>
 
@@ -106,11 +108,11 @@ chrome.tabs.executeScript( {
 
                 <p><em>Sentences</em> are calculated by counting any '.', '?' and '!' characters that are followed by a space, with one added to the total to account for the final sentence.</p>
 
-                <p class="before-list">The calculation does not account for:</p>
+                <p class="before-list">The method does not account for:</p>
                 <ul>
-                  <li>sentences that don't end with '.', '?' or '!'</li>
-                  <li>text such as 'word/word', which would count as one word (though by extension pluralisation such as 'text/s' would correctly count as one)</li>
-                  <li>text such as 'U.S. Congress', which would increase the sentence count regardless of whether 'U.S.' was the end of a sentence</li>
+                  <li>sentences that don't end with '.', '?' or '!' (except the final sentence)</li>
+                  <li>text such as 'word/word', which would count as one word (though by extension pluralisation such as 'text/s' would also count as one)</li>
+                  <li>text such as 'U.S. Congress', where the '. ' would increase the sentence count by one regardless of whether 'U.S.' was the end of a sentence</li>
                   <li>any further complexities not captured by the method as described above</li>
                 </ul>
               </div>
