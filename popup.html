@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Selected Text Readability</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- own CSS and JavaScript -->
+    <link href="styles.css" rel="stylesheet">
+    <script src="readability.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar navbar bg-primary">
+          <div class="navbar-brand text-white"><b>Selected Text Readability</b></div>
+      </div>
+    </header>
+    <main>
+      <!-- default content if no text selected -->
+      <div class="accordion" id="accordion">
+        <div class="card">
+          <div class="card-header bg-danger" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <b class="text-white">No text selected!</b>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              Select some text then try again
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

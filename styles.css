@@ -1,0 +1,29 @@
+/* set width of popup */
+body {
+  width: 300px;
+}
+
+/* center the extension name (div) */
+.navbar-brand {
+  margin: 0 auto;
+}
+
+/* center the text in the extension name div, main (as default) and the body of the first card */
+.navbar-brand, main, #collapseOne .card-body {
+  text-align: center;
+}
+
+/* add padding to everything except the exension name */
+main {
+  padding: 10px;
+}
+
+/* left-align the text in the body of the second and third cards (all cards except the first, as overwritten above) */
+.card-body {
+  text-align: left;
+}
+
+/* remove space between paragraph and list */
+.before-list {
+  margin-bottom: 0;
+}
