@@ -3,7 +3,9 @@
   <h1 style="flex: auto; margin: 5px; border: 0; top: 5px; color: 1E252B;"> Selected Text Readability</h1>
 </div>
 
-<p>Chrome extension for measuring the readability of selected text.</p>
+<div>
+  <p>Chrome extension for measuring the readability of selected text.</p>
+</div>
 
 ## Installation
 1. Go to chrome://extensions (or in the Chrome menu, "More tools" then "Extensions")
