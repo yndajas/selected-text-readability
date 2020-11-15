@@ -144,9 +144,9 @@ chrome.tabs.executeScript( {
             </div>
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
               <div class="card-body">
-                <p>The calculation is based on the <a href="https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index" target="_blank">Coleman-Liau index</a> and relies on counting letters, words and sentences, as outlined below.</p>
+                <p>The calculation is based on the <a href="https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index" target="_blank">Coleman-Liau Index</a><sup>*</sup> and relies on counting letters, words and sentences, as outlined below.</p>
 
-                <p>Note: for greater accuracy, before running the calculation the text is stripped of any characters other than a-z/A-Z, '.', '?', '!' and spaces, and consecutive spaces and line breaks are reduced to a single space.</p>
+                <p>For greater accuracy, before running the calculation the text is stripped of any characters other than a-z/A-Z, '.', '?', '!' and spaces, and consecutive spaces and line breaks are reduced to a single space.</p>
 
                 <p><em>Letters</em> are the characters a-z/A-Z.</p>
 
@@ -156,11 +156,18 @@ chrome.tabs.executeScript( {
 
                 <p class="before-list">The method does not account for:</p>
                 <ul>
+                  <li>letters other than a-z/A-Z (or non-alphabetic scripts - <a href="https://en.wikipedia.org/wiki/Writing_system" target="_blank">syllabaries, logographies, abjads and abugidas</a>)</li>
                   <li>sentences that don't end with '.', '?' or '!' (except the final sentence)</li>
                   <li>text such as 'word/word', which would count as one word (though by extension pluralisation such as 'text/s' would also count as one)</li>
                   <li>text such as 'U.S. Congress', where the '. ' would increase the sentence count by one regardless of whether 'U.S.' was the end of a sentence</li>
                   <li>any further complexities not captured by the method as described above</li>
                 </ul>
+
+                <hr>
+
+                <p><em><sup>*</sup> The Coleman-Liau Index is one of many commonly-used readability tests, the results of which differ.</em></p>
+
+                <p><em>Readable provides <a href="https://readable.com/features/readability-formulas" target="_blank">explainers</a> on both the Coleman-Liau Index and a number of alternatives.</em></p>
               </div>
             </div>
           </div>
