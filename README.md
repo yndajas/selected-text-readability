@@ -1,4 +1,4 @@
-<img src="icons/icon128.png" alt="icon">
+<img src="icons/icon128.png" alt="extension icon" title="extension icon">
 
 <h1> Selected Text Readability</h1>
 
