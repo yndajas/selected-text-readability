@@ -1,5 +1,49 @@
 // readability alogithm
-// TODO
+function readability(text) {
+  // initialise counts
+  var letters = 0;
+  var words = 0;
+  var sentences = 0;
+
+  // itearate through all characters of text
+  for (let i = 0; i < text.length; i++) {
+    // get unicode value of character
+    let char_unicode = text.charCodeAt(i);
+
+    // if a-z or A-Z
+    if ((char_unicode >= 65 && char_unicode <= 90) || (char_unicode >= 97 && char_unicode <= 122)) {
+      letters++;
+    } else if (char_unicode === 32) { // if space
+      words++;
+    } else if ([46, 33, 63].includes(char_unicode) && text.charCodeAt(i + 1) === 32) { // if . ! ? and next character is a space
+      sentences++;
+    }
+  }
+
+  // as word count is only incremented by spaces, and sentence count is only incremented where sentence-final punctuation is followed by a space, the counts need incrementing by one (if there are any words)
+  if (letters > 0) {
+    words ++;
+    sentences++;
+  }
+
+  // get average number of letters per 100 words
+  let l = letters / words * 100;
+
+  // get average number of sentences per 100 words
+  let s = sentences / words * 100;
+
+  // calculate Coleman-Liau index, round it and assign the result to variable grade
+  let grade = Math.round(0.0588 * l - 0.296 * s - 15.8);
+
+  // return grade
+  if (grade < 1) {
+    return "Before US grade 1"
+  } else if (grade >= 16) {
+    return "US grade 16+";
+  } else {
+    return `US grade ${grade}`;
+  }
+}
 
 // execute a script on the current tab
 chrome.tabs.executeScript( {
@@ -7,12 +51,12 @@ chrome.tabs.executeScript( {
     code: "window.getSelection().toString();"
 }, function(selection) { // pass in the return value of the code (the selected text) to a function as selection
     // trim leading and trailing spaces, replace new lines with spaces, then reduce any remaining consecutive spaces to single spaces
-    var text = selection[0].trim().replace(/(\r\n|\n|\r)/gm, ' ').replace(/\s\s+/g, ' ')
+    var text = selection[0].trim().replace(/(\r\n|\n|\r)/gm, ' ').replace(/\s\s+/g, ' ');
 
     // if there is selected text, run readability alogrithm and inject result
     if (text.length > 0) { // if not, provide usage instructions;
       // get reading level
-      var reading_level = "TODO"
+      var reading_level = readability(text);
 
       // populate HTML main
       document.getElementsByTagName("main")[0].innerHTML =

@@ -3,7 +3,7 @@
 
   "name": "Selected Text Readability",
   "description": "Measure readability of selected text",
-  "version": "0.1",
+  "version": "1.0",
 
   "browser_action": {
     "default_popup": "popup.html"
