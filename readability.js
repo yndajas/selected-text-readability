@@ -84,7 +84,11 @@ chrome.tabs.executeScript( {
               </h5>
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-              <div id="text" class="card-body"></div>
+              <div class="card-body">
+                <p id="text"></p>
+                <hr>
+                <p><em>Note: text is stripped of characters other than a-z/A-Z, '.', '?', '!' and spaces, and consecutive spaces and line breaks are reduced to a single space.</em></p>
+              </div>
             </div>
           </div>
 
@@ -92,11 +96,53 @@ chrome.tabs.executeScript( {
             <div class="card-header" id="headingThree">
               <h5 class="mb-0">
                 <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <b class="text-dark">Method and limitations</b>
+                  <b class="text-dark">Grade equivalence</b>
                 </button>
               </h5>
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">US</th>
+                      <th scope="col">&#8776; UK</th>
+                      <th scope="col">&#8776; age</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td scope="row">2</td>
+                      <td scope="row">6-7</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">6</td>
+                      <td scope="row">7</td>
+                      <td scope="row">11-12</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">12</td>
+                      <td scope="row">13</td>
+                      <td scope="row">17-18</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>Grades 13-16 are roughly equivalent to undergraduate higher education.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h5 class="mb-0">
+                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <b class="text-dark">Method and limitations</b>
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
               <div class="card-body">
                 <p>The calculation is based on the <a href="https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index" target="_blank">Coleman-Liau index</a> and relies on counting letters, words and sentences, as outlined below.</p>
 

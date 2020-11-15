@@ -23,6 +23,11 @@ main {
   text-align: left;
 }
 
+/* center text in table */
+table {
+  text-align: center;
+}
+
 /* remove space between paragraph and list */
 .before-list {
   margin-bottom: 0;
