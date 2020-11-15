@@ -1,5 +1,9 @@
-# Selected Text Readability
-Chrome extension for measuring the readability of selected text.
+<div style="display: flex; flex-direction: row; width: 100%; align-items: center;">
+  <img style="max-width: 128px; flex: auto; margin-right: 20px" align="left" src="icons/icon128.png" alt="icon">
+  <h1 style="flex: auto; margin: 5px; border: 0; top: 5px; color: 1E252B;"> Selected Text Readability</h1>
+</div>
+
+<p style="clear: left">Chrome extension for measuring the readability of selected text.</p>
 
 ## Installation
 1. Go to chrome://extensions (or in the Chrome menu, "More tools" then "Extensions")
