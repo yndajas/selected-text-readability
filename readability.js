@@ -32,7 +32,7 @@ function readability(text) {
   // get average number of sentences per 100 words
   let s = sentences / words * 100;
 
-  // calculate Coleman-Liau index, round it and assign the result to variable grade
+  // calculate Coleman-Liau Index, round it and assign the result to variable grade
   let grade = Math.round(0.0588 * l - 0.296 * s - 15.8);
 
   // return grade
