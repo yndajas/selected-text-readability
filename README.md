@@ -4,7 +4,7 @@
 
 Chrome extension for estimating the readability of selected text.
 
-You can view a demo of the extension in action over on YouTube: <a href="https://www.youtube.com/watch?v=_AP_qb5wuMA" target="_blank" title="app demo on YouTube">youtube.com/watch?v=_AP_qb5wuMA</a>)
+You can view a demo of the extension in action over on YouTube: <a href="https://www.youtube.com/watch?v=_AP_qb5wuMA" target="_blank" title="app demo on YouTube">youtube.com/watch?v=_AP_qb5wuMA</a>
 
 ## Installation
 1. Go to chrome://extensions (or in the Chrome menu, "More tools" then "Extensions")
