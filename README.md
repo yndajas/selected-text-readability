@@ -4,13 +4,23 @@
 
 Chrome extension for estimating the readability of selected text.
 
-You can view a demo of the extension in action over on YouTube: <a href="https://www.youtube.com/watch?v=_AP_qb5wuMA" target="_blank" title="app demo on YouTube">youtube.com/watch?v=_AP_qb5wuMA</a>
+The extension is publicly available via the <a href="https://chrome.google.com/webstore/detail/selected-text-readability/gmmgeofdbimelpnapecnbdckopibaecl" target="_blank" title="Selected Text Readability Chrome Web Store listing">Chrome Web Store</a>.
+
+You can view a demo of the extension in action over on YouTube: <a href="https://www.youtube.com/watch?v=_AP_qb5wuMA" target="_blank" title="app demo on YouTube">youtube.com/watch?v=_AP_qb5wuMA</a>.
 
 ## Installation
-1. Go to chrome://extensions (or in the Chrome menu, "More tools" then "Extensions")
-2. Enable developer mode via the toggle (top right as at November 2020)
-2. Click on "Load unpacked" (top left as at November 2020)
-3. Select folder with extension files
+
+### Easy method (Chrome Web Store)
+
+Go to the <a href="https://chrome.google.com/webstore/detail/selected-text-readability/gmmgeofdbimelpnapecnbdckopibaecl" target="_blank" title="Selected Text Readability Chrome Web Store listing">Chrome Web Store listing</a> and click "Add to Chrome".
+
+### Alternative method (manual)
+
+1. Clone or download and extract the repository
+2. Go to chrome://extensions (or in the Chrome menu, "More tools" then "Extensions")
+3. Enable developer mode via the toggle (top right as at November 2020)
+4. Click on "Load unpacked" (top left as at November 2020)
+5. Select folder with extension files (from step 1)
 
 The extension should now be loaded into Chrome.
 
