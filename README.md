@@ -8,6 +8,8 @@ The extension is publicly available via the <a href="https://chrome.google.com/w
 
 You can view a demo of the extension in action over on YouTube: <a href="https://www.youtube.com/watch?v=_AP_qb5wuMA" target="_blank" title="app demo on YouTube">youtube.com/watch?v=_AP_qb5wuMA</a>.
 
+[![YouTube demo](https://img.youtube.com/vi/_AP_qb5wuMA/maxresdefault.jpg)](http://www.youtube.com/watch?v=_AP_qb5wuMA)
+
 ## Installation
 
 ### Easy method (Chrome Web Store)
